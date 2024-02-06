@@ -165,6 +165,10 @@
     <value>Pick color from screen</value>
     <comment>Tooltip that shows that the user can click this button to pick a new color</comment>
   </data>
+  <data name="Delete_all_colors" xml:space="preserve">
+    <value>Delete all active colors from screen</value>
+    <comment>Tooltip that shows that the user can click this button to delete all active colors</comment>
+  </data>
   <data name="Red_value" xml:space="preserve">
     <value>Red value</value>
     <comment>Tool tip that appears when hovering over a textbox that represents the red HEX value</comment>

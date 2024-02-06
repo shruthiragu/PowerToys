@@ -275,7 +275,17 @@ namespace ColorPicker.Properties {
                 return ResourceManager.GetString("Remove", resourceCulture);
             }
         }
-        
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to Delete all active colors from screen.
+        /// </summary>
+        public static string Delete_all_colors {
+            get {
+                return ResourceManager.GetString("Delete_all_colors", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Saturation slider.
         /// </summary>

@@ -8,7 +8,7 @@
              xmlns:ui="http://schemas.modernwpf.com/2019"
              xmlns:e="http://schemas.microsoft.com/xaml/behaviors"
              xmlns:controls="clr-namespace:ColorPicker.Controls"
-             xmlns:behaviors="clr-namespace:ColorPicker.Behaviors"
+             xmlns:behaviors="clr-namespace:ColorPicker.Behaviors" xmlns:viewmodels="clr-namespace:ColorPicker.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:ColorEditorViewModel}"
              WindowChrome.IsHitTestVisibleInChrome="True"
              x:Name="colorEditorControl">
     <Grid>
@@ -128,6 +128,20 @@
                     AutomationProperties.Name="{x:Static p:Resources.Pick_color}">
                 <Button.Content>
                     <TextBlock Text="&#xEF3C;" AutomationProperties.Name="{x:Static p:Resources.Pick_color}" />
+                </Button.Content>
+            </Button>
+
+            <Button Width="64"
+                    Height="32"
+                    TabIndex="75"
+                    Command="{Binding RemoveAllColorsCommand}"
+                    Background="Blue"
+                    FontFamily="Segoe MDL2 Assets"
+                    ui:FocusVisualHelper.FocusVisualMargin="-1"
+                    ToolTipService.ToolTip="{x:Static p:Resources.Delete_all_colors}"
+                    AutomationProperties.Name="{x:Static p:Resources.Delete_all_colors}" Margin="120,0,0,0">
+                <Button.Content>                    
+                    <ui:FontIcon Glyph="&#xE74D;" AutomationProperties.Name="{x:Static p:Resources.Pick_color}" />
                 </Button.Content>
             </Button>
         </Grid>
