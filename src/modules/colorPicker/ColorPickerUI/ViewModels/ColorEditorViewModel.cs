@@ -166,10 +166,7 @@ namespace ColorPicker.ViewModels
 
         private void DeleteAllSelectedColors()
         {
-            foreach (var color in ColorsHistory)
-            {
-                ColorsHistory.Remove(color);
-            }
+            ColorsHistory.Clear();
 
             SelectedColorIndex = -1;
             SessionEventHelper.Event.EditorHistoryColorRemoved = true;

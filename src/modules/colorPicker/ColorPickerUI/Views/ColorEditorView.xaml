@@ -135,7 +135,7 @@
                     Height="32"
                     TabIndex="75"
                     Command="{Binding RemoveAllColorsCommand}"
-                    Background="Blue"
+                    Background="Red"
                     FontFamily="Segoe MDL2 Assets"
                     ui:FocusVisualHelper.FocusVisualMargin="-1"
                     ToolTipService.ToolTip="{x:Static p:Resources.Delete_all_colors}"
