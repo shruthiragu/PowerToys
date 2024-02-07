@@ -400,4 +400,8 @@
     <value>Plum</value>
     <comment>Plum color</comment>
   </data>
+  <data name="Remove_all_colors" xml:space="preserve">
+    <value>Remove all colors</value>
+    <comment>Tooltip that shows that the user can click this button to remove all colors</comment>
+  </data>
 </root>

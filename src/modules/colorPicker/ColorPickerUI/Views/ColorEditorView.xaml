@@ -130,6 +130,22 @@
                     <TextBlock Text="&#xEF3C;" AutomationProperties.Name="{x:Static p:Resources.Pick_color}" />
                 </Button.Content>
             </Button>
+
+            <!-- New button to remove all colors -->
+            <Button Width="64"
+                    Height="32"
+                    Margin="64, 0, 0, 0"
+                    TabIndex="0"
+                    Command="{Binding RemoveAllColorsCommand}"
+                    Background="Transparent"
+                    FontFamily="Segoe MDL2 Assets"
+                    ui:FocusVisualHelper.FocusVisualMargin="-1"
+                    ToolTipService.ToolTip="{x:Static p:Resources.Remove_all_colors}"
+                    AutomationProperties.Name="{x:Static p:Resources.Remove_all_colors}">
+                <Button.Content>
+                    <TextBlock Text="&#xE74D;" AutomationProperties.Name="{x:Static p:Resources.Remove_all_colors}" />
+                </Button.Content>
+            </Button>
         </Grid>
 
 
