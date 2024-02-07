@@ -20,7 +20,8 @@
         <!-- Side bar -->
         <Grid Background="{DynamicResource SecondaryBackgroundBrush}">
             <ui:ListView x:Name="HistoryColors" 
-                         Margin="0,48,0,1"
+                         Margin="0,48,0,0"
+                         Grid.Row="1"
                          Padding="0"
                          TabIndex="2"
                          KeyboardNavigation.DirectionalNavigation="Contained"
