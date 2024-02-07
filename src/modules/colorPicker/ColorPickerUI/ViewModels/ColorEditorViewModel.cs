@@ -41,6 +41,7 @@ namespace ColorPicker.ViewModels
             RemoveAllColorsCommand = new RelayCommand(DeleteAllSelectedColors);
             ExportColorsGroupedByColorCommand = new RelayCommand(ExportSelectedColorsByColor);
             ExportColorsGroupedByFormatCommand = new RelayCommand(ExportSelectedColorsByFormat);
+            ExportAllColorsGroupedByColorCommand = new RelayCommand(ExportAllColors);
             SelectedColorChangedCommand = new RelayCommand((newColor) =>
             {
                 if (ColorsHistory.Contains((Color)newColor))
@@ -72,6 +73,8 @@ namespace ColorPicker.ViewModels
         public ICommand ExportColorsGroupedByColorCommand { get; }
 
         public ICommand ExportColorsGroupedByFormatCommand { get; }
+
+        public ICommand ExportAllColorsGroupedByColorCommand { get; }
 
         public ICommand SelectedColorChangedCommand { get; }
 
@@ -206,6 +209,12 @@ namespace ColorPicker.ViewModels
                 File.WriteAllText(dialog.FileName, contentToWrite);
                 SessionEventHelper.Event.EditorColorsExported = true;
             }
+        }
+
+        private void ExportAllColors()
+        {
+            var colorsToExport = ColorsHistory.ToList();
+            ExportColors(colorsToExport, GroupExportedColorsBy.Color);
         }
 
         // Will select the closest color to the last selected one in color history

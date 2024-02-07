@@ -160,6 +160,24 @@ namespace ColorPicker.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete all active colors from screen.
+        /// </summary>
+        public static string Delete_all_colors {
+            get {
+                return ResourceManager.GetString("Delete_all_colors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Export all active colors.
+        /// </summary>
+        public static string Export_all_colors_by_color {
+            get {
+                return ResourceManager.GetString("Export_all_colors_by_color", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Export.
         /// </summary>
         public static string Export_by {
@@ -275,17 +293,7 @@ namespace ColorPicker.Properties {
                 return ResourceManager.GetString("Remove", resourceCulture);
             }
         }
-
-
-        /// <summary>
-        ///   Looks up a localized string similar to Delete all active colors from screen.
-        /// </summary>
-        public static string Delete_all_colors {
-            get {
-                return ResourceManager.GetString("Delete_all_colors", resourceCulture);
-            }
-        }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Saturation slider.
         /// </summary>
