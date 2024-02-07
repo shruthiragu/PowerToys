@@ -160,6 +160,15 @@ namespace ColorPicker.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Export all colors.
+        /// </summary>
+        public static string Export_all_colors {
+            get {
+                return ResourceManager.GetString("Export_all_colors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Export.
         /// </summary>
         public static string Export_by {
@@ -185,7 +194,7 @@ namespace ColorPicker.Properties {
                 return ResourceManager.GetString("Export_by_format", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Green value.
         /// </summary>

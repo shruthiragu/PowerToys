@@ -146,6 +146,21 @@
                     <TextBlock Text="&#xE74D;" AutomationProperties.Name="{x:Static p:Resources.Remove_all_colors}" />
                 </Button.Content>
             </Button>
+
+            <Button Width="64"
+                    Height="32"
+                    Margin="128, 0, 0, 0"
+                    TabIndex="0"
+                    Command="{Binding ExportAllColorsCommand}"
+                    Background="Transparent"
+                    FontFamily="Segoe MDL2 Assets"
+                    ui:FocusVisualHelper.FocusVisualMargin="-1"
+                    ToolTipService.ToolTip="{x:Static p:Resources.Export_all_colors}"
+                    AutomationProperties.Name="{x:Static p:Resources.Export_all_colors}">
+                <Button.Content>
+                    <TextBlock Text="&#xEDE1;" AutomationProperties.Name="{x:Static p:Resources.Export_all_colors}" />
+                </Button.Content>
+            </Button>
         </Grid>
 
 

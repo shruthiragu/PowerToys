@@ -43,6 +43,7 @@ namespace ColorPicker.ViewModels
             RemoveColorsCommand = new RelayCommand(DeleteSelectedColors);
             ExportColorsGroupedByColorCommand = new RelayCommand(ExportSelectedColorsByColor);
             ExportColorsGroupedByFormatCommand = new RelayCommand(ExportSelectedColorsByFormat);
+            ExportAllColorsCommand = new RelayCommand(ExportAllColorsToJSONByColor);
             SelectedColorChangedCommand = new RelayCommand((newColor) =>
             {
                 if (ColorsHistory.Contains((Color)newColor))
@@ -75,6 +76,8 @@ namespace ColorPicker.ViewModels
         public ICommand ExportColorsGroupedByColorCommand { get; }
 
         public ICommand ExportColorsGroupedByFormatCommand { get; }
+
+        public ICommand ExportAllColorsCommand { get; }
 
         public ICommand SelectedColorChangedCommand { get; }
 
@@ -185,14 +188,25 @@ namespace ColorPicker.ViewModels
             ExportColors(selectedColors, GroupExportedColorsBy.Format);
         }
 
-        private void ExportColors(object colorsToExport, GroupExportedColorsBy method)
+        private void ExportAllColorsToJSONByColor()
+        {
+            var colorsToExport = ColorsHistory.ToList();
+            ExportColors(colorsToExport, GroupExportedColorsBy.Color, "JSON");
+        }
+
+        private void ExportColors(object colorsToExport, GroupExportedColorsBy method, string fileType = null)
         {
             var colors = SerializationHelper.ConvertToDesiredColorFormats((IList)colorsToExport, ColorRepresentations, method);
+            var filter = "Text Files (*.txt)|*.txt|Json Files (*.json)|*.json";
+            if (!string.IsNullOrEmpty(fileType) && fileType == "JSON")
+            {
+                filter = "Json Files (*.json)|*.json";
+            }
 
             var dialog = new SaveFileDialog
             {
                 Title = "Save selected colors to",
-                Filter = "Text Files (*.txt)|*.txt|Json Files (*.json)|*.json",
+                Filter = filter,
             };
 
             if (dialog.ShowDialog() == true)
