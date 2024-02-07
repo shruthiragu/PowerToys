@@ -128,15 +128,15 @@
         ToolTipService.ToolTip="{x:Static p:Resources.Open_settings}"
         AutomationProperties.Name="{x:Static p:Resources.Open_settings}" />
             <Button Width="46"
-Command="{Binding RemoveAllColorsCommand}"
-Height="32"
-Content="&#xE713;"
-TabIndex="2"
-Background="Transparent"
-FontFamily="Segoe MDL2 Assets"
-Margin="295,0,0,0"
-ToolTipService.ToolTip="Remove all colors"
-AutomationProperties.Name="Remove all colors" >
+        Command="{Binding RemoveAllColorsCommand}"
+        Height="32"
+        Content="&#xE74D;"
+        TabIndex="2"
+        Background="Transparent"
+        FontFamily="Segoe MDL2 Assets"
+        Margin="295,0,0,0"
+        ToolTipService.ToolTip="Remove all colors"
+        AutomationProperties.Name="Remove all colors" >
                 <Button.BorderBrush>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black"/>
@@ -193,16 +193,15 @@ AutomationProperties.Name="Remove all colors" >
                 </StackPanel>
             </ScrollViewer>
 
-            <controls:ColorPickerControl HorizontalAlignment="Left"
-                                         Margin="0,44,0,0"
+            <controls:ColorPickerControl
+                                         Margin="56,44,10,0"
                                          Visibility="{Binding ColorsHistory.Count, Converter={StaticResource numberToVisibilityConverter}}"
                                          IsTabStop="True"
                                          TabIndex="2"
                                          KeyboardNavigation.DirectionalNavigation="Contained"
                                          SelectedColor="{Binding SelectedColor}"
                                          SelectedColorChangedCommand="{Binding SelectedColorChangedCommand}"
-                                         Grid.Column="1"
-                                         VerticalAlignment="Top" />
+                                         VerticalAlignment="Top" Height="80" />
         </Grid>
 
         <!-- Empty history -->
