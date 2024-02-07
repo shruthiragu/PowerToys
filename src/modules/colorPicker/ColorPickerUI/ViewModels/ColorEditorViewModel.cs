@@ -66,8 +66,9 @@ namespace ColorPicker.ViewModels
         public ICommand OpenSettingsCommand { get; }
 
         public ICommand RemoveColorsCommand { get; }
+
         public ICommand RemoveAllColorsCommand { get; }
-        
+
         public ICommand ExportColorsGroupedByColorCommand { get; }
 
         public ICommand ExportColorsGroupedByFormatCommand { get; }

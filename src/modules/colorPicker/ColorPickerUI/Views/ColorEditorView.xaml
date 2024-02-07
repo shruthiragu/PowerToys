@@ -10,7 +10,7 @@
              xmlns:controls="clr-namespace:ColorPicker.Controls"
              xmlns:behaviors="clr-namespace:ColorPicker.Behaviors"
              WindowChrome.IsHitTestVisibleInChrome="True"
-             x:Name="colorEditorControl">
+             x:Name="colorEditorControl" Height="124" Width="451">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="64"/>
@@ -127,6 +127,23 @@
         Margin="0,0,46,0"
         ToolTipService.ToolTip="{x:Static p:Resources.Open_settings}"
         AutomationProperties.Name="{x:Static p:Resources.Open_settings}" />
+            <Button Width="46"
+Command="{Binding RemoveAllColorsCommand}"
+Height="32"
+Content="&#xE713;"
+TabIndex="2"
+Background="Transparent"
+FontFamily="Segoe MDL2 Assets"
+Margin="295,0,0,0"
+ToolTipService.ToolTip="Remove all colors"
+AutomationProperties.Name="Remove all colors" >
+                <Button.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.BorderBrush>
+            </Button>
 
             <Button Width="64"
                     Height="32"
@@ -141,6 +158,7 @@
                     <TextBlock Text="&#xEF3C;" AutomationProperties.Name="{x:Static p:Resources.Pick_color}" />
                 </Button.Content>
             </Button>
+
         </Grid>
 
 
