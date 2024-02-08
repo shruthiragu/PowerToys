@@ -185,6 +185,10 @@
     <value>Grouped by format</value>
     <comment>Tooltip that shows the user can export the selected items grouped by format to a file</comment>
   </data>
+  <data name="Export_all_colors" xml:space="preserve">
+    <value>Export all colors</value>
+    <comment>Tooltip that shows the user can export all the selected items grouped by color to a file</comment>
+  </data>
   <data name="Saturation_slider" xml:space="preserve">
     <value>Saturation slider</value>
     <comment>Tool tip that appears when hovering over a slider that represents the color saturation (from HSV)</comment>
