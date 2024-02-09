@@ -143,7 +143,10 @@
                     ToolTipService.ToolTip="{x:Static p:Resources.Remove_all_colors}"
                     AutomationProperties.Name="{x:Static p:Resources.Remove_all_colors}">
                 <Button.Content>
-                    <TextBlock Text="&#xE74D;" AutomationProperties.Name="{x:Static p:Resources.Remove_all_colors}" />
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xE74D;" VerticalAlignment="Center" AutomationProperties.Name="{x:Static p:Resources.Remove_all_colors}" />
+                        <TextBlock Text="ALL" VerticalAlignment="Center" FontFamily="Segoe UI" FontSize="10" FontWeight="DemiBold" Margin="1.5, 0, 0. 0" AutomationProperties.Name="{x:Static p:Resources.Remove_all_colors}" />
+                    </StackPanel>
                 </Button.Content>
             </Button>
 
