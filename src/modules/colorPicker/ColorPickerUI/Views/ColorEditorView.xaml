@@ -161,7 +161,10 @@
                     ToolTipService.ToolTip="{x:Static p:Resources.Export_all_colors}"
                     AutomationProperties.Name="{x:Static p:Resources.Export_all_colors}">
                 <Button.Content>
-                    <TextBlock Text="&#xEDE1;" AutomationProperties.Name="{x:Static p:Resources.Export_all_colors}" />
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xEDE1;" VerticalAlignment="Center" AutomationProperties.Name="{x:Static p:Resources.Export_all_colors}" />
+                        <TextBlock Text="ALL" VerticalAlignment="Center" FontFamily="Segoe UI" FontSize="10" FontWeight="DemiBold" Margin="2.5, 0, 0. 0" AutomationProperties.Name="{x:Static p:Resources.Export_all_colors}" />
+                    </StackPanel>
                 </Button.Content>
             </Button>
         </Grid>
