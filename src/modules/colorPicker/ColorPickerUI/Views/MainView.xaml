@@ -47,11 +47,11 @@
                        AutomationProperties.LiveSetting="Assertive"
                        AutomationProperties.LabeledBy="{Binding ColorName}" 
                        AutomationProperties.Name="{Binding ColorName}" 
-                       Text="{Binding ColorText}"/>
+                       />
                 </Grid>
 
                 <!--color format and color name - two lines-->
-                <Grid Margin="2" Visibility="{Binding ShowColorName, Converter={StaticResource bool2VisibilityConverter}}">
+                <Grid Margin="2" Visibility="{Binding ColorName}">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="26"/>
                         <RowDefinition Height="26"/>
