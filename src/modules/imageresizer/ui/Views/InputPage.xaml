@@ -246,6 +246,11 @@
                     Margin="16,2,16,0"
                     Content="{x:Static p:Resources.Input_RemoveMetadata}"
                     IsChecked="{Binding Settings.RemoveMetadata}" />
+
+                <CheckBox
+                    Margin="16,2,16,0"
+                    Content="{x:Static p:Resources.Input_PersistCreationDate}"
+                    IsChecked="{Binding Settings.PersistCreationDate}" />    
             </StackPanel>
 
             <Border
