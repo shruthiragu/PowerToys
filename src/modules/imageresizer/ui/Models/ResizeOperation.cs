@@ -122,6 +122,11 @@ namespace ImageResizer.Models
                 _fileSystem.File.SetLastWriteTimeUtc(path, _fileSystem.File.GetLastWriteTimeUtc(_file));
             }
 
+            if (_settings.PersistCreationDate)
+            {
+                _fileSystem.File.SetCreationTimeUtc(path, _fileSystem.File.GetCreationTimeUtc(_file));
+            }
+
             if (_settings.Replace)
             {
                 var backup = GetBackupPath();

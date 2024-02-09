@@ -151,6 +151,15 @@ namespace ImageResizer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Persist creation date from original image.
+        /// </summary>
+        public static string Input_PersistCreationDate {
+            get {
+                return ResourceManager.GetString("Input_PersistCreationDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Remove metadata that doesn&apos;t affect rendering.
         /// </summary>
         public static string Input_RemoveMetadata {

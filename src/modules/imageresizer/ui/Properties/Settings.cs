@@ -39,6 +39,7 @@ namespace ImageResizer.Properties
         private bool _replace;
         private bool _ignoreOrientation;
         private bool _removeMetadata;
+        private bool _persistCreationDate;
         private int _jpegQualityLevel;
         private PngInterlaceOption _pngInterlaceOption;
         private TiffCompressOption _tiffCompressOption;
@@ -54,6 +55,7 @@ namespace ImageResizer.Properties
             Replace = false;
             IgnoreOrientation = true;
             RemoveMetadata = false;
+            PersistCreationDate = false;
             JpegQualityLevel = 90;
             PngInterlaceOption = System.Windows.Media.Imaging.PngInterlaceOption.Default;
             TiffCompressOption = System.Windows.Media.Imaging.TiffCompressOption.Default;
@@ -307,6 +309,25 @@ namespace ImageResizer.Properties
             set
             {
                 _removeMetadata = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether resizing images persists the creation date of the original image(s).
+        /// Default is false.
+        /// </summary>
+        /// <remarks>
+        /// Preserved creation date.
+        /// </remarks>
+        [JsonConverter(typeof(WrappedJsonValueConverter))]
+        [JsonPropertyName("imageresizer_persistCreationDate")]
+        public bool PersistCreationDate
+        {
+            get => _persistCreationDate;
+            set
+            {
+                _persistCreationDate = value;
                 NotifyPropertyChanged();
             }
         }
